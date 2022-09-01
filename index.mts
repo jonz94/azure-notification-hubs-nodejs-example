@@ -12,8 +12,9 @@ const androidDeviceTag = process.env.ANDROID_DEVICE_TAG!;
 
 if (androidDeviceTag) {
   const gcmPayload = {
-    data: {
-      message: 'Hello!',
+    notification: {
+      title: 'Hello!',
+      body: 'Hello!',
     },
   };
 
