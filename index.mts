@@ -8,7 +8,7 @@ const notificationHubService = createNotificationHubService(
   process.env.AZURE_NOTIFICATION_HUB_CONNECTION_STRING!,
 );
 
-const androidDeviceTag = process.env.ANDROID_DEVICE_TAG!;
+const androidDeviceTag = process.env.ANDROID_DEVICE_TAG;
 
 if (androidDeviceTag) {
   const gcmPayload = {
@@ -30,7 +30,7 @@ if (androidDeviceTag) {
   });
 }
 
-const iosDeviceTag = process.env.IOS_DEVICE_TAG!;
+const iosDeviceTag = process.env.IOS_DEVICE_TAG;
 
 if (iosDeviceTag) {
   const apnsPayload = {
